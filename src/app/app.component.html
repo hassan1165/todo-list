@@ -11,7 +11,7 @@
 		</div>
 		<div class="data">
 		<ol class="list-unstyled">
-			<li [@moveInLeft]  *ngFor="let todo of todoArray">{{todo}} <i (click)="deleteItem(todo)">delete</i></li>
+			<li [@moveInLeft]  *ngFor="let todo of todoArray">{{todo}} <mat-icon (click)="deleteItem(todo)">delete</mat-icon></li>
 		</ol>
 	</div>
 	</form>

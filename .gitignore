@@ -59,3 +59,5 @@ Thumbs.db
 .angular/cache/15.0.3/angular-webpack/6db3e4238f1bfba43ff445bee3220f6ca765487c/5.pack
 .angular/cache/15.0.3/angular-webpack/6db3e4238f1bfba43ff445bee3220f6ca765487c/index.pack
 .angular/cache/15.0.3/angular-webpack/6db3e4238f1bfba43ff445bee3220f6ca765487c/index.pack.old
+*.json
+*.pack

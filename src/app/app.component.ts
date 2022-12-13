@@ -2,10 +2,6 @@ import { animate, keyframes, style, transition, trigger } from '@angular/animati
 import { ChangeDetectorRef, Component } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
-export interface Item {
-  description: string;
-  done: boolean;
-}
 
 @Component({
   selector: 'app-root',
@@ -47,11 +43,10 @@ export class AppComponent {
   addTodo(value: any) {
     if (value !== "") {
       this.todoArray.push(value)
-      //  this.todoForm.resetForm();
-      //console.log(this.todos)
     } else {
       alert('Field required **')
     }
+    this.todo = "";
     this.ref.detectChanges();
   }
 

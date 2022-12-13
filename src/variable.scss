@@ -1,0 +1,186 @@
+@use '@angular/material' as mat;
+@import '@angular/material/theming';
+
+// TODO(v15): As of v15 mat.legacy-core no longer includes default typography styles.
+//  The following line adds:
+//    1. Default typography styles for all components
+//    2. Styles for typography hierarchy classes (e.g. .mat-headline-1)
+//  If you specify typography styles for the components you use elsewhere, you should delete this line.
+//  If you don't need the default component typographies but still want the hierarchy styles,
+//  you can delete this line and instead use:
+//    `@include mat.legacy-typography-hierarchy(mat.define-legacy-typography-config());`
+@include mat.all-legacy-component-typographies();
+@include mat.legacy-core();
+
+$primary-color: #00aeef;
+$secondary-color: #ec008c;
+$yallow-color: #ffcf35;
+$light-color : #f6f8fa;
+$light-color-text-bg : #fff;
+$light-color-text-bg-hover : #eaf0fb;
+$white-color: #fff;
+$black-color: #000;
+$title-color: #18272c;
+$border-color: #e9ebec;
+$scrolbar-color: #c5cfda;
+
+$wamtsol-blue: (
+ 50: #00aeef,
+ 100: #dddd,
+ 200: #eee,
+ 300: #000,
+ // ... continues to 900
+ contrast: (
+   50: rgba(255,255,255),
+   100: rgba(black, 0.87),
+   200: rgba(black, 0.87),
+   300: white,
+   // ... continues to 900
+ )
+);
+$wamtsol-primary: mat.define-palette($wamtsol-blue, 50, 100, 200);
+
+$wamtsol-pink: (
+ 50: #ec008c,
+ 100: #dddd,
+ 200: #eee,
+ 300: #000,
+ // ... continues to 900
+ contrast: (
+   50:rgba(255,255,255),
+   100: rgba(black, 0.87),
+   200: rgba(black, 0.87),
+   300: white,
+   // ... continues to 900
+ )
+);
+$wamtsol-accent: mat.define-palette($wamtsol-pink, 50, 100, 200);
+
+$wamtsol-theme: mat.define-light-theme((
+ color: (
+   primary: $wamtsol-primary,
+   accent: $wamtsol-accent,
+ )
+));
+
+@include mat.all-legacy-component-themes($wamtsol-theme);
+
+// Include the theme mixins for other components you use here.
+
+$dark-app-theme: mat-dark-theme((
+  color: (
+    primary: mat-palette($mat-cyan),
+    accent: mat-palette($mat-blue-gray, A200, A100, A400),
+    warn: mat-palette($mat-amber),
+  )
+));
+
+.dark-theme {
+  @include angular-material-color($dark-app-theme);
+  .logo {
+    a{
+      h2 {
+        color: #fff;
+      }
+    } 
+  }
+}
+.light-theme{
+  .logo {
+    a{
+      h2 {
+        color: $black-color;
+      }
+    } 
+  }
+  .mat-toolbar{
+    background-color: $light-color;
+    &.mat-topbar{
+      background-color: transparent;
+      border-bottom: 1px solid #e9ebec;
+      .mat-icon{
+        color: $black-color;
+      }
+    }
+  }
+  .mat-drawer-container {
+      background: transparent;
+  }
+  .sidenav {
+    background-color: $light-color;
+    border-right: 1px solid $border-color;
+  }
+  .main-menu{
+    a {
+      color:#395660 !important;
+      height: auto;
+      margin: 0px;
+      font-weight: 600;
+      //background: $light-color-text-bg;
+      border-bottom: 1px solid rgba(0,0,0,6%);
+      border-radius: 0px;
+      padding: 4px 0px;
+      &:first-child{
+        border-top: 1px solid rgba(0,0,0,6%);
+      }
+      &:hover{
+        //background: $light-color-text-bg-hover;
+      }
+      &:focus{
+        //background: $light-color-text-bg-hover;
+      }
+      &.active{
+        //background: $light-color-text-bg-hover;
+      }
+    }
+  }
+  .content {
+    .table-header {
+      .brand-title{
+        h2 {
+          color: $black-color;
+        }
+      }
+      .brands-button {
+        float: right;
+        .mat-focus-indicator.mat-raised-button.mat-button-base {
+          color: $black-color;
+        }
+      }
+    }
+  }
+  .drop-down-menu{
+    background-color: $light-color !important;
+    .mat-menu-content {
+      .mat-raised-button {
+        color: $black-color !important;
+        &:hover{
+          background-color: $light-color !important;
+        }
+      }
+    }
+    
+  }
+  .bashboard-box{
+    p {
+      color: $title-color;
+    } 
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $light-color-text-bg-hover; 
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $scrolbar-color; 
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $scrolbar-color; 
+  }
+  .mat-slide-toggle-bar {
+    background: #b1c9c9;
+  }
+}

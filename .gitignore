@@ -45,3 +45,17 @@ testem.log
 Thumbs.db
 
 .env
+.angular/cache/15.0.3/angular-webpack/343abe68fb58d530bf869d3a08cbf237d52da252/index.pack.old
+.angular/cache/15.0.3/angular-webpack/343abe68fb58d530bf869d3a08cbf237d52da252/0.pack
+.angular/cache/15.0.3/angular-webpack/343abe68fb58d530bf869d3a08cbf237d52da252/1.pack
+.angular/cache/15.0.3/angular-webpack/343abe68fb58d530bf869d3a08cbf237d52da252/2.pack
+.angular/cache/15.0.3/angular-webpack/343abe68fb58d530bf869d3a08cbf237d52da252/3.pack
+.angular/cache/15.0.3/angular-webpack/343abe68fb58d530bf869d3a08cbf237d52da252/index.pack
+.angular/cache/15.0.3/angular-webpack/6db3e4238f1bfba43ff445bee3220f6ca765487c/0.pack
+.angular/cache/15.0.3/angular-webpack/6db3e4238f1bfba43ff445bee3220f6ca765487c/1.pack
+.angular/cache/15.0.3/angular-webpack/6db3e4238f1bfba43ff445bee3220f6ca765487c/2.pack
+.angular/cache/15.0.3/angular-webpack/6db3e4238f1bfba43ff445bee3220f6ca765487c/3.pack
+.angular/cache/15.0.3/angular-webpack/6db3e4238f1bfba43ff445bee3220f6ca765487c/4.pack
+.angular/cache/15.0.3/angular-webpack/6db3e4238f1bfba43ff445bee3220f6ca765487c/5.pack
+.angular/cache/15.0.3/angular-webpack/6db3e4238f1bfba43ff445bee3220f6ca765487c/index.pack
+.angular/cache/15.0.3/angular-webpack/6db3e4238f1bfba43ff445bee3220f6ca765487c/index.pack.old
